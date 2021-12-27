@@ -2,10 +2,11 @@ apiVersion: v1 # K8S API Version
 kind: Pod  # Object Type
 metadata: 
  name: nginx 
-volumes:
-  - name: app-storage
-    emptyDir: {}
+
 spec:
+ volumes:
+   - name: app-storage
+     emptyDir: {}
  containers:
  - name: app1 
    image: supergiantkir/animals:bear 
